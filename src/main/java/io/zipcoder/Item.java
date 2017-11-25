@@ -1,11 +1,10 @@
 package io.zipcoder;
 
-public class Item {
+public class Item{
     private String name;
     private Double price;
     private String type;
     private String expiration;
-
     /**
      * Item should not be created unless you have all of the elements, which is why you are forcing
      * it to be set in the constructor. In ItemParser, if you do not find all the elements of a Item,
@@ -22,22 +21,18 @@ public class Item {
         this.expiration = expiration;
     }
 
-    public String getName() {
+    public Item(String name, String price, String type, String expiration) {
+    }
+
+    public String getName(){
         return name;
     }
 
-
-    public Double getPrice() {
-        return price;
-    }
-
-
-    public String getType() {
+    public String getType(){
         return type;
     }
 
-
-    public String getExpiration() {
+    public String getExpiration(){
         return expiration;
     }
 
@@ -45,4 +40,17 @@ public class Item {
     public String toString(){
         return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
     }
+
+//    public String formattedOutput(){
+//        StringBuilder stringBuilder = new StringBuilder();
+//        stringBuilder.append("name:\t" + name)
+//                .append("\t\tseen: "+  +" times\n")
+//                .append("=============\t\t=============\n");
+//        for(     ){
+//            stringBuilder.append("Price:\t"+
+//                    .append("\t\tseen: "+  +" times\n")
+//                    .append("-------------\t\t-------------\n");
+//        }
+//        return stringBuilder.toString();
+//    }
 }
